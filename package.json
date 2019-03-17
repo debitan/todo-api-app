@@ -1,0 +1,16 @@
+{
+  "name": "todo_api_app",
+  "version": "1.0.0",
+  "description": "A single page todo app using jQuery to access a mongo database through a node.js api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Matthews",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  }
+}
