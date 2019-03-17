@@ -37,14 +37,16 @@ function addTodo(todo){
 function createTodo(){
     //send request to create new todo
     var usrInput = $('#todoInput').val();
-    $.post('/api/todos',{name: usrInput})
-    .then(function(newTodo){
-        $('#todoInput').val('');
-        addTodo(newTodo);
-    })
-    .catch(function(err){
-        console.log(err);
-    })
+    if(usrInput !== ""){
+        $.post('/api/todos',{name: usrInput})
+        .then(function(newTodo){
+            $('#todoInput').val('');
+            addTodo(newTodo);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+    }
 }
 
 function removeTodo(todo){
