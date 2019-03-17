@@ -1,7 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"),
+      dbURL = process.env.DATABASEURL || "mongodb://localhost/todo-api"
 
 mongoose.set("debug", true);
-mongoose.connect("mongodb://localhost/todo-api");
+mongoose.connect(dbURL, {useNewUrlParser: true});
 
 mongoose.Promise = Promise;
 
